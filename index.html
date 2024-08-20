@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es-mx"> <!-- lenguaje seleccionado, esto es el principio de nuestro documento de apertura-->
+<head><!-- es la cabecera del html, tiene la función de suministrar información sobre todo el documento, la etiqueta-->
+    <meta charset="UTF-8"> <!--caracteres horaria si esta mal se rompe paraguay es utf-4-->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"><!--viewport(visualizacion de la pagina) y "width=device-width(que lapagina se adapte al tel o compu) y initial-scale=1.0">//iniciamos sin ninguna version-->
+    <title>Portafolio</title>
+
+    <!-- Otros meta tags y enlaces pueden ir aquí -->
+    <!--tags:Una etiqueta o tag es una palabra clave asignada a un dato almacenado en un repositorio-->
+    <link rel="stylesheet" href="./style/style.css"> <!--esto se coloca para vincular el css rel="stylesheet" especifica que el enlace es a una hoja de estilos y el html, el href se pone el nombre del archivo-->
+
+</head>
+<body> <!--cuerpo del html-->
+    <header class="header"> <!-- aporta información del cuerpo del documento o de alguna sección dentro del cuerpo-->
+        <nav class="header_menu"> <!--de navegacion-->
+            <a class="header_menu_link" href="./index.html">home</a>
+            <a class="header_menu_link" href="./about.html">sobre mi</a>
+        </nav>
+    </header>
+    <main class="presentacion"><!--elemento padre nuestro conteiner-->
+        <section class="presentacion-contenido">
+            <h1 class="presentacion-contenido-titulo"><!--titulo de la pagina, se escribe una sola vez,si quiero mas h2,h3.-->
+                Eleve tu negocio digital a otro nivel 
+                <strong class="titulo-destaque">con un Front-end de calidad! <!--para crear una clase se escribe .y el nombre de la clase-->
+                </strong></h1>
+                <p class="presentacion-contenido-texto"><!--esto es un parrafo-->
+                    ¡Hola! Soy Ana García, desarrolladora Front-end con
+                    especialización en React, HTML y CSS. Ayudo a pequeños
+                    negocios y diseñadores a llevar a cabo buenas ideas.
+                    ¿Hablamos?
+                </p>
+                <div class="presentacion-enlaces"><!--divide en secciones-->
+                    <h2 class="presentacion-enlaces-subtitulos"> accede a mis redes: </h2>
+                    <a class="presentacion-enlaces-link"  href="https://instagram.com/">
+                        <img src="./assets/instagram.png">
+                        Instagram</a> <!-- esto sirve para redirigir a un boton en una pagina-->
+                    <a class="presentacion-enlaces-link" href="https://github.com/">
+                        <img src="./assets/github.png">
+                        GitHub</a> <!--<a>  es para anclas.-->
+                </div>
+        </section> 
+            <img  class="presentacion_imagen" src="./assets/Imagem.png" alt="Foto de Ana García desarrolando un proyecto"><!--este es el camino de la imagen, alt es un texto alternativo de la imagen-->      
+    </main>
+    <footer class="footer"> <!--representa el cierre-->
+        <p> desarrollado por alura latam</p>
+    </footer>
+</body>
+</html>

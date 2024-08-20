@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css2?family=Krona+One&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+/*se usa para modificar todos los elementos del proyecto que se utiliza varias veces*/
+:root{
+    --color-primario:#0D7C66;
+    --color-secundario: #41B3A2;
+    --color-terciario: #BDE8CA;
+    --color-hover: #D7C3F1;
+
+    --fuente-montserrat:'Montserrat', sans serif;
+    --fuente-krona: 'krona one',sans-serif;
+}
+* {
+    padding: 0;
+    margin:0;
+}
+/* *se utiliza para resetear los estilos por defecto de los elementos HTML
+este código elimina el padding y el margen de todos los elementos HTML*/
+
+body{
+    background-color: var(--color-primario);
+    color: var(--color-secundario);
+    /*height: 100vh;  la v significa viewport y la h significa la altura de nuestra pagina*/
+    /*box sizing define el tamaño 
+    width es la anchura: width + padding + border
+    height es la altura : height +padding + border*/
+    box-sizing: border-box;
+}
+.header{
+ padding: 2% 0% 0% 10%;
+}
+.header_menu{
+    display: flex;
+    gap: 80px;
+}
+.header_menu_link{
+    font-family:var(--fuente-montserrat);
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--color-terciario);
+    text-decoration: none;
+}
+/*Flexbox organiza los elementos  y que sea un diseño flexible*/
+/* alinear elementos a través de justify-content
+el objetivo es ajustar el espacio entre la sección de texto y la imagen */
+/*Al definir el valor de la propiedad display de un elemento como flex, creamos un contenedor flex,
+ es decir, comenzamos a utilizar Flexbox. A partir de este punto, todos los elementos dentro del 
+ contenedor se llaman elementos hijos y mostrarán comportamientos estandarizados.*/
+.presentacion{
+    display: flex;
+    align-items: center;
+    padding: 5% 10%;
+    justify-content: space-between;
+    gap: 82px;
+}
+.presentacion-contenido{
+    width: 50%;/*cambiamos de unidad de medida de una absoluta a una relativa  de px a porciento*/
+    display: flex; /* coloca los cuadrados uno al lado del otro */
+    flex-direction: column;
+    gap: 40px;/* agrega espacios iguales entre cada cuadrado */
+   
+}
+/*Importando y aplicando la fuente correcta de goofgle fond*/
+.presentacion-contenido-titulo{
+    font-size: 2.25rem;/* 1rem:16px entonces 36px equivale a cuantos rem a 2.25--> 1*36/16:2.25*/
+    font-family:var(--fuente-krona);
+}
+/*esto es una clase*/
+.titulo-destaque {
+    color: var(--color-terciario); 
+}
+.presentacion-contenido-texto{
+    font-size: 1.5rem;
+    font-family:var(--fuente-montserrat);
+}
+/*Mejorando la visibilidad de los botones*/
+.presentacion-enlaces{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column; /* sirve para poner los botones en forma de columna*/
+    align-items: center; /* para que esten centrados*/
+    gap: 32px; /*para espacios entre botones*/
+
+}
+.presentacion-enlaces-subtitulos{
+    font-family:var(--fuente-krona);
+    font-size: 1.5rem;
+    font-weight: 400;
+}
+.presentacion-enlaces-link { /* estilizar el boton*/
+    width: 50%;
+    text-align: center;
+    padding: 21.5PX 0; /*Ajustando el espaciado interno de los botones,es responsable de definir la distancia entre un contenido y sus bordes*/
+    border-radius: 8px; /* largor del cuadrado*/
+    font-family: var(--fuente-montserrat);
+    font-size: 1.5rem; /* tamaño de la letra*/
+    font-weight: 600;
+    text-decoration: none;
+    color: var(--color-secundario);
+    border: 2px solid var(--color-terciario) ; /*ponerle estilos al borde*/
+    display: flex;
+    justify-content: center ;
+    gap: 10px;
+}
+.presentacion-enlaces-link:hover{/*hover se utiliza para seleccionar elementos cuando pasas el ratón sobre ellos*/
+    background-color:var(--color-hover);
+}
+.presentacion_imagen{
+    width: 50%;
+}
+.footer{
+    background-color: var(--color-terciario);
+    padding: 23px;
+    color:var(--color-primario);
+    text-align: center;
+    font-family: var(--fuente-montserrat);
+    font-size: 1.5rem;
+    font-weight: 400;
+}
+@media(max-width:1200px){
+    .header{
+        padding: 10%;
+    }
+    .header_menu{
+        justify-content: center;
+    }
+    .presentacion{
+        flex-direction: column-reverse;
+        padding: 5%;
+    }
+    .presentacion-contenido{
+        width: auto;
+    }
+}
